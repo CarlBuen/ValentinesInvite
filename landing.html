@@ -91,12 +91,16 @@
         <p>Sincerily, Carl</p>
     </footer>
 
+    <!-- Background Music -->
     <audio id="background-music" autoplay loop>
         <source src="OldLove.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+
+    <!-- Yes and No Sounds -->
     <audio id="yesSound" src="yes-sound.mp3"></audio>
     <audio id="noSound" src="no-sound.mp3"></audio>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var music = document.getElementById('background-music');
@@ -104,7 +108,7 @@
             if (musicTime) {
                 music.currentTime = musicTime;
             }
-            music.volume = 0.5; // Adjust the volume (0.0 to 1.0)
+            music.volume = 0.2; // Adjust the volume (0.0 to 1.0) for background music
             music.play();
             music.addEventListener('canplaythrough', function() {
                 console.log('Background music can play through.');
