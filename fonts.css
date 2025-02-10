@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sugar+Gummy&display=swap');
+
+/* Root variables */
+:root {
+    --primary: #fff;
+    --bg-color: rgb(104, 0, 0);
+    --bg-envelope-color: #f5edd1;
+    --envelope-tab: #ecdeb8;
+    --envelope-cover: #e6cfa7;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --heart-color: #ff0000;
+    --glow-color: #ff69b4;
+    --green: #28a745;
+    --red: #dc3545;
+}

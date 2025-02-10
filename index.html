@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./envelope.css">
+    <link rel="stylesheet" href="./hearts.css">
+    <link rel="stylesheet" href="./styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Sour Gummy', cursive;
+            animation: fadeIn 1s ease-in; /* Smooth fade-in transition */
+        }
+        audio {
+            position: fixed;
+            bottom: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+        /* Smooth fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Happy Valentine's!</h1>
+    </header>
+
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Hi Kei,</strong>
+                        <p>
+                            Been a while. Just wanna greet you Happy Valentines. I hope everything is going well. 
+                            I just want to ask if you wanna relieve some stress and enjoy a day with me on a trampoline 
+                            park at Venice Grand Canal. Promise it'll be fun and my treat hehe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart" onclick="animateHearts()"></div>
+        </div>
+
+        <div class="instructions">
+            <p>Click the heart above!</p>
+        </div>
+
+        <div class="image-container">
+            <img src="WillJump.png" alt="Will Jump" class="top-image">
+        </div>
+
+        <div class="second-page">
+            <p>What do you say po, wanna have fun?</p>
+        </div>
+
+        <div class="yes-no-buttons">
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+        </div>
+    </div>
+
+    <!-- Pop-up Modal -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">✖</button>
+            <img src="Happy.png" alt="Happy Image">
+            <p>Yay! Thank you Kei, I was not able to make this notif sakin e kaya please kindly dm me if for your answer po hehe. 😊🎉</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sincerily, Carl</p>
+    </footer>
+
+    <audio id="background-music" autoplay loop>
+        <source src="OldLove.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="yesSound" src="yes-sound.mp3"></audio>
+    <audio id="noSound" src="no-sound.mp3"></audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var music = document.getElementById('background-music');
+            var musicTime = sessionStorage.getItem('musicTime');
+            if (musicTime) {
+                music.currentTime = musicTime;
+            }
+            music.volume = 0.5; // Adjust the volume (0.0 to 1.0)
+            music.play();
+            music.addEventListener('canplaythrough', function() {
+                console.log('Background music can play through.');
+            }, false);
+            music.addEventListener('error', function(e) {
+                console.error('Error playing background music:', e);
+            }, false);
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

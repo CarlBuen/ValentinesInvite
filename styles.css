@@ -1,0 +1,123 @@
+/* Yes/No buttons */
+.yes-no-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.yes-no-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.yes-no-buttons .yes {
+    background-color: var(--green);
+    color: var(--primary);
+}
+
+.yes-no-buttons .no {
+    background-color: var(--red);
+    color: var(--primary);
+}
+
+.yes-no-buttons button:hover {
+    opacity: 0.8;
+}
+/* Second page content */
+.second-page {
+    margin-top: 2em;
+    padding: 2em;
+    background: linear-gradient(135deg, rgba(255, 36, 69, 0.4), rgba(255, 0, 153, 0.2)); /* Light pink fill with gradient */
+    border: 3px solid #fa5cab; /* Different shade of pink border (Hot pink) */
+    box-shadow: 
+        0 10px 20px var(--shadow-color), /* Main shadow */
+        inset 0 0 10px rgba(200, 65, 178, 0.6), /* Inner shadow for 3D effect */
+        0 0 20px rgba(255, 255, 255, 0.5); /* Additional glow */
+    border-radius: 80px; /* Soft corners */
+    width: 70%;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.second-page:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover for added 3D effect */
+}
+
+
+/* Pop-up Modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffdde1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    width: 350px;
+    max-width: 90%;
+}
+
+.popup img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.popup-content {
+    position: relative;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+/* Floating elements */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+.floating {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.2; /* Low opacity */
+    animation: float 10s linear infinite; /* Floating animation */
+    z-index: 1; /* Ensure it is behind other elements */
+}
+
+/* Random sizes */
+.floating-heart {
+    width: 30px;
+    height: 30px;
+    background: url('heart.png') no-repeat center center; /* Path to heart image */
+    background-size: contain;
+}
+
+.floating-note {
+    width: 30px;
+    height: 30px;
+    background: url('note.png') no-repeat center center; /* Path to note image */
+    background-size: contain;
+}

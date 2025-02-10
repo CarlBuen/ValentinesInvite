@@ -1,0 +1,68 @@
+/* Heart styles */
+.heart {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    transform: translateX(-50%) rotate(-45deg);
+    cursor: pointer;
+    animation: heartbeat 1.348s infinite; /* Adjusted to match the tempo (2 beats duration) */
+    z-index: 5;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    border-radius: 50%;
+}
+
+.heart:hover {
+    background: var(--glow-color);
+    box-shadow: 0 0 20px 10px var(--glow-color);
+}
+
+.heart::before {
+    top: -8px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 8px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: translateX(-50%) rotate(-45deg) scale(1);
+    }
+    33% {
+        transform: translateX(-50%) rotate(-45deg) scale(1.2);
+    }
+    66% {
+        transform: translateX(-50%) rotate(-45deg) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) rotate(-45deg) scale(1.2);
+    }
+}
+
+.heart:hover {
+    background: var(--glow-color);
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+/* Clickable heart text */
+.heart + .text {
+    font-family: 'Oregano', sans-serif;
+    font-size: 10px;
+    color: var(--txt-color);
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
