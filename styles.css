@@ -113,7 +113,7 @@
     .second-page {
         margin-top: 1em; /* Further reduce top margin */
         padding: 1em; /* Further reduce padding */
-        width: 80%; /* Increase width for smaller screens */
+        width: 70%; /* Increase width for smaller screens */
         border-radius: 15px; /* Further reduce border radius */
         font-size: 12px; /* Further reduce font size */
     }
