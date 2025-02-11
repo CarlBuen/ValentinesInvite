@@ -33,21 +33,21 @@
 .second-page {
     margin-top: 1.5em;
     padding: 1.5em;
-    background: linear-gradient(135deg, rgba(255, 36, 69, 0.4), rgba(255, 0, 153, 0.2)); /* Light pink fill with gradient */
-    border: 2px solid #fa5cab; /* Different shade of pink border (Hot pink) */
+    background: linear-gradient(135deg, rgba(255, 36, 69, 0.4), rgba(255, 0, 153, 0.2));
+    border: 2px solid #fa5cab;
     box-shadow: 
-        0 5px 10px var(--shadow-color), /* Main shadow */
-        inset 0 0 5px rgba(200, 65, 178, 0.6), /* Inner shadow for 3D effect */
-        0 0 10px rgba(255, 255, 255, 0.5); /* Additional glow */
-    border-radius: 45px; /* Reduced border radius */
+        0 5px 10px var(--shadow-color), 
+        inset 0 0 5px rgba(200, 65, 178, 0.6), 
+        0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 45px; /* Change border radius here */
     width: 45%;
     text-align: center;
-    transition: transform 0.3s ease; /* Smooth transition on hover */
-    font-size: 12px; /* Reduced font size */
+    transition: transform 0.3s ease;
+    font-size: 12px;
 }
 
 .second-page:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover for added 3D effect */
+    transform: scale(1.05);
 }
 
 /* Pop-up Modal */
@@ -69,7 +69,7 @@
 
 .popup img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 10px; /* Change border radius here */
     margin-bottom: 15px;
 }
 
@@ -92,44 +92,44 @@
 
 /* Adjusting the image */
 .top-image {
-    width: 450px; /* Adjusting to make the image larger */
+    width: 450px;
     height: auto;
-    margin: 0 auto; /* Centering the image */
-    display: block; /* Ensuring it's treated as a block element */
+    margin: 0 auto;
+    display: block;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 480px) {
     .yes-no-buttons {
-        gap: 1em; /* Further reduce gap */
-        margin-top: 1em; /* Further reduce top margin */
+        gap: 1em;
+        margin-top: 1em;
     }
 
     .yes-no-buttons button {
-        padding: 5px 10px; /* Further reduce padding */
-        font-size: 14px; /* Further reduce font size */
+        padding: 5px 10px;
+        font-size: 14px;
     }
 
     .second-page {
-        margin-top: 1em; /* Further reduce top margin */
-        padding: 1em; /* Further reduce padding */
-        width: 50%; /* Increase width for smaller screens */
-        border-radius: 35px; /* Further reduce border radius */
-        font-size: 12px; /* Further reduce font size */
+        margin-top: 1em;
+        padding: 1em;
+        width: 50%;
+        border-radius: 35px; /* Change border radius here */
+        font-size: 12px;
     }
 
     .popup {
-        padding: 20px; /* Further reduce padding */
-        width: 300px; /* Further reduce width */
-        max-width: 90%; /* Increase max-width for smaller screens */
+        padding: 20px;
+        width: 300px;
+        max-width: 90%;
     }
 
     .close-btn {
-        font-size: 20px; /* Further reduce font size */
+        font-size: 20px;
     }
 
     .top-image {
-        width: 80%; /* Adjusting to make the image larger */
-        max-width: 350px; /* Ensuring it doesn't exceed this size */
+        width: 80%;
+        max-width: 350px;
     }
 }
