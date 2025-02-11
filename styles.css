@@ -31,18 +31,19 @@
 
 /* Second page content */
 .second-page {
-    margin-top: 2em;
-    padding: 2em;
+    margin-top: 1.5em;
+    padding: 1.5em;
     background: linear-gradient(135deg, rgba(255, 36, 69, 0.4), rgba(255, 0, 153, 0.2)); /* Light pink fill with gradient */
-    border: 3px solid #fa5cab; /* Different shade of pink border (Hot pink) */
+    border: 2px solid #fa5cab; /* Different shade of pink border (Hot pink) */
     box-shadow: 
-        0 10px 20px var(--shadow-color), /* Main shadow */
-        inset 0 0 10px rgba(200, 65, 178, 0.6), /* Inner shadow for 3D effect */
-        0 0 20px rgba(255, 255, 255, 0.5); /* Additional glow */
-    border-radius: 80px; /* Soft corners */
-    width: 70%;
+        0 5px 10px var(--shadow-color), /* Main shadow */
+        inset 0 0 5px rgba(200, 65, 178, 0.6), /* Inner shadow for 3D effect */
+        0 0 10px rgba(255, 255, 255, 0.5); /* Additional glow */
+    border-radius: 20px; /* Reduced border radius */
+    width: 60%;
     text-align: center;
     transition: transform 0.3s ease; /* Smooth transition on hover */
+    font-size: 14px; /* Reduced font size */
 }
 
 .second-page:hover {
@@ -112,8 +113,9 @@
     .second-page {
         margin-top: 1em; /* Further reduce top margin */
         padding: 1em; /* Further reduce padding */
-        width: 90%; /* Increase width for smaller screens */
-        border-radius: 40px; /* Further reduce border radius */
+        width: 80%; /* Increase width for smaller screens */
+        border-radius: 15px; /* Further reduce border radius */
+        font-size: 12px; /* Further reduce font size */
     }
 
     .popup {
