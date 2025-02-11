@@ -91,8 +91,7 @@
 
 /* Adjusting the image */
 .top-image {
-    width: 85%; /* Adjusting to make the image slightly larger than the envelope */
-    max-width: 400px; /* Ensuring it doesn't exceed this size */
+    width: 450px; /* Adjusting to make the image larger */
     height: auto;
     margin: 0 auto; /* Centering the image */
     display: block; /* Ensuring it's treated as a block element */
