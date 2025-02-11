@@ -88,3 +88,46 @@
     border: none;
     color: #333;
 }
+
+/* Adjusting the image */
+.top-image {
+    width: 80%; /* Adjusting to make the image smaller */
+    max-width: 400px; /* Ensuring it doesn't exceed this size */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 480px) {
+    .yes-no-buttons {
+        gap: 1em; /* Further reduce gap */
+        margin-top: 1em; /* Further reduce top margin */
+    }
+
+    .yes-no-buttons button {
+        padding: 5px 10px; /* Further reduce padding */
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .second-page {
+        margin-top: 1em; /* Further reduce top margin */
+        padding: 1em; /* Further reduce padding */
+        width: 90%; /* Increase width for smaller screens */
+        border-radius: 40px; /* Further reduce border radius */
+    }
+
+    .popup {
+        padding: 20px; /* Further reduce padding */
+        width: 300px; /* Further reduce width */
+        max-width: 90%; /* Increase max-width for smaller screens */
+    }
+
+    .close-btn {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    .top-image {
+        width: 70%; /* Further reduce size for smaller screens */
+        max-width: 300px; /* Ensuring it doesn't exceed this size */
+    }
+}
