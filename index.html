@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Sugar+Gummy&display=swap" rel="stylesheet">
@@ -17,6 +16,9 @@
             font-family: 'Sugar Gummy', cursive;
             overflow: hidden; /* Prevent scroll during animation */
         }
+        header {
+            font-family: 'Great Vibes', cursive; /* Specific font for the header */
+        }
         .start-button {
             display: flex;
             align-items: center;
@@ -24,7 +26,7 @@
             gap: 10px; /* Adjust the gap between the text and the play icon */
             padding: 5px 20px; /* Adjust the padding of the button */
             font-size: 20px; /* Adjust the font size of the text */
-            font-family: 'Sugar Gummy', cursive;
+            font-family: 'Sugar Gummy', cursive; /* Ensure distinct font */
             border: 5px solid #fff;
             border-radius: 50px;
             background: linear-gradient(135deg, #ff9a9e, #ff6b6b);
@@ -87,10 +89,35 @@
                 opacity: 0;
             }
         }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .start-button {
+                font-size: 18px;
+                padding: 5px 15px;
+            }
+            .play-icon {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .start-button {
+                font-size: 16px;
+                padding: 5px 10px;
+            }
+            .play-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <button class="start-button" onclick="startExperience()">
+    <header>
+        <h1>Happy Valentine's!</h1>
+    </header>
+    <button class="start-button" onclick="startExperience(); playMusic()">
         Start
         <svg class="play-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 5v14l11-7L8 5z"/>
@@ -111,6 +138,11 @@
             setTimeout(() => {
                 window.location.href = 'landing.html';
             }, 1000); // Match the duration of the fade-out animation
+        }
+
+        function playMusic() {
+            const music = document.getElementById('background-music');
+            music.play();
         }
     </script>
 </body>
