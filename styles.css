@@ -40,10 +40,10 @@
         inset 0 0 5px rgba(200, 65, 178, 0.6), /* Inner shadow for 3D effect */
         0 0 10px rgba(255, 255, 255, 0.5); /* Additional glow */
     border-radius: 20px; /* Reduced border radius */
-    width: 60%;
+    width: 45%;
     text-align: center;
     transition: transform 0.3s ease; /* Smooth transition on hover */
-    font-size: 14px; /* Reduced font size */
+    font-size: 12px; /* Reduced font size */
 }
 
 .second-page:hover {
