@@ -28,6 +28,7 @@
 .yes-no-buttons button:hover {
     opacity: 0.8;
 }
+
 /* Second page content */
 .second-page {
     margin-top: 2em;
@@ -47,7 +48,6 @@
 .second-page:hover {
     transform: scale(1.05); /* Slightly enlarge on hover for added 3D effect */
 }
-
 
 /* Pop-up Modal */
 .popup {
@@ -87,37 +87,4 @@
     background: none;
     border: none;
     color: #333;
-}
-
-/* Floating elements */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100vh);
-    }
-}
-
-.floating {
-    position: absolute;
-    bottom: 0;
-    opacity: 0.2; /* Low opacity */
-    animation: float 10s linear infinite; /* Floating animation */
-    z-index: 1; /* Ensure it is behind other elements */
-}
-
-/* Random sizes */
-.floating-heart {
-    width: 30px;
-    height: 30px;
-    background: url('heart.png') no-repeat center center; /* Path to heart image */
-    background-size: contain;
-}
-
-.floating-note {
-    width: 30px;
-    height: 30px;
-    background: url('note.png') no-repeat center center; /* Path to note image */
-    background-size: contain;
 }
