@@ -61,7 +61,7 @@ body {
     padding: 2em;
     background: var(--bg-envelope-color);
     box-shadow: 0 10px 20px var(--shadow-color);
-    border-radius: 5px;
+    border-radius: 45px;
     width: 90%;
     text-align: center;
 }
