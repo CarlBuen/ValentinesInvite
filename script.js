@@ -7,6 +7,10 @@ const noSound = document.getElementById('noSound');   // Reference to No sound
 const closeBtn = document.querySelector('.close-btn');
 const heart = document.querySelector('.heart');
 
+// Set volume for sounds
+yesSound.volume = 0.4; // Adjust the volume (0.0 to 1.0) for Yes sound
+noSound.volume = 0.2;  // Adjust the volume (0.0 to 1.0) for No sound
+
 // Store original positions
 const originalNoTop = noButton.offsetTop;
 const maxMoveDistance = 192; // 2 inches (96 DPI)
