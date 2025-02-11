@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Envelope + Letter (Open/Close on Click)</title>
     
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./layout.css">
     <link rel="stylesheet" href="./envelope.css">
-    <link rel="stylesheet" href="./hearts.css">
+    <link rel="stylesheet" href="./heart.css">
     <link rel="stylesheet" href="./styles.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
@@ -89,35 +88,4 @@
 
     <footer>
         <p>Sincerily, Carl</p>
-    </footer>
-
-    <!-- Background Music -->
-    <audio id="background-music" autoplay loop>
-        <source src="OldLove.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- Yes and No Sounds -->
-    <audio id="yesSound" src="yes-sound.mp3"></audio>
-    <audio id="noSound" src="no-sound.mp3"></audio>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var music = document.getElementById('background-music');
-            var musicTime = sessionStorage.getItem('musicTime');
-            if (musicTime) {
-                music.currentTime = musicTime;
-            }
-            music.volume = 0.2; // Adjust the volume (0.0 to 1.0) for background music
-            music.play();
-            music.addEventListener('canplaythrough', function() {
-                console.log('Background music can play through.');
-            }, false);
-            music.addEventListener('error', function(e) {
-                console.error('Error playing background music:', e);
-            }, false);
-        });
-    </script>
-    <script src="./script.js"></script>
-</body>
-</html>
+   
