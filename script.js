@@ -89,31 +89,3 @@ function toggleEnvelope() {
 function closePopup() {
     popup.style.display = 'none';
 }
-
-function createFloatingElement(className, minSize, maxSize) {
-    const element = document.createElement('div');
-    element.className = `floating ${className}`;
-    const size = Math.random() * (maxSize - minSize) + minSize;
-    element.style.width = `${size}px`;
-    element.style.height = `${size}px`;
-    element.style.left = `${Math.random() * 100}vw`;
-    element.style.animationDuration = `${Math.random() * 5 + 10}s`;
-    document.body.appendChild(element);
-
-    // Remove element after animation ends
-    element.addEventListener('animationend', () => {
-        element.remove();
-    });
-}
-
-function addFloatingElements() {
-    for (let i = 0; i < 20; i++) {
-        setTimeout(() => {
-            createFloatingElement('floating-heart', 20, 60);
-            createFloatingElement('floating-note', 20, 60);
-        }, i * 500);
-    }
-}
-
-// Call the function to start floating elements as soon as the page loads
-window.addEventListener('load', addFloatingElements);
